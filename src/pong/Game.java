@@ -46,8 +46,8 @@ public class Game extends Canvas implements Runnable, KeyListener {
         }
         Graphics g = layer.getGraphics();
         //Creando o player
-        g.setColor(Color.black);
-        g.fillRect(0,0,WIDTH,HEIGHT);
+        g.setColor(Color.black); //Set o player para black, melhorando a movimentação
+        g.fillRect(0,0,WIDTH,HEIGHT); //Set o player para black, melhorando a movimentação
         player.render(g);
 
         g = bs.getDrawGraphics();
