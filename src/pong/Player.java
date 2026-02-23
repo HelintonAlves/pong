@@ -10,7 +10,7 @@ public class Player {
     public Player(int x , int y){
         this.x = x;
         this.y = y;
-        this.width = 10;
+        this.width = 5;
         this.height = 40;
     }
 
