@@ -11,10 +11,10 @@ Este é um clone do clássico jogo **Pong**, desenvolvido durante o curso da **D
 
 Ao contrário de um clone comum, este projeto possui um sistema de **Dificuldade Progressiva** que eu implementei para tornar o gameplay mais dinâmico:
 
-* **Sistema de Levels (0 a 4):** O jogo monitora seu desempenho e avança de nível conforme você vence.
+* **Sistema de Levels (1 a 4):** O jogo monitora seu desempenho e avança de nível conforme você vence.
 * **Velocidade Escalonada:** A cada level, tanto a **bola** quanto a **IA do Computador** ficam mais rápidas, exigindo reflexos cada vez mais afiados.
 * **Contagem de Vitórias:** Implementação de lógica para rastrear a transição entre níveis.
-* **Loop de Jogo:** Ao superar o Level 4, o jogo retorna ao Level 0, reiniciando o ciclo de desafio.
+* **Loop de Jogo:** Ao superar o Level 4, o jogo retorna ao Level 1, reiniciando o ciclo de desafio.
 
 ---
 
@@ -52,5 +52,5 @@ O controle é intuitivo e permite que você escolha o estilo de sua preferência
 
 > **Atenção:** Se você quer apenas testar o jogo sem precisar abrir o código ou compilar nada, o executável já está pronto para uso!
 > 
-> 📂 Basta navegar até a pasta: `out/artifacts`  
+> 📂 Basta navegar até a pasta: `/artifacts`  
 > 🎮 Localize o arquivo `.jar` e execute-o diretamente.
