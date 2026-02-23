@@ -57,10 +57,10 @@ public class Level {
         g.setFont(new Font("arial", Font.BOLD,8));
         g.setColor(Color.white);
         g.drawString("Level " + level, 5, Game.HEIGHT - 5);
-        if (vitoriaPlayer > 0){
+        if (level > 0){
             g.setFont(new Font("arial", Font.BOLD, 8));
             g.setColor(Color.MAGENTA);
-            g.drawString("Vitória: " + vitoriaPlayer, 200,Game.HEIGHT - 5);
+            g.drawString("Vitória Player: " + vitoriaPlayer, 180,Game.HEIGHT - 5);
         }
     }
 
