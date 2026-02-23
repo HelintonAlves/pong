@@ -16,7 +16,8 @@ public class Game extends Canvas implements Runnable, KeyListener {
     public static Player player;
     public static Enemy enemy;
     public static Ball ball;
-    public static int pointPlayer = 0, pointComputador = 0, level = 1;
+    public static Level level;
+    public static int pointPlayer = 0, pointComputador = 0;
 
 
     public Game(){
@@ -25,6 +26,9 @@ public class Game extends Canvas implements Runnable, KeyListener {
         player = new Player(0, 60);
         enemy = new Enemy(235, 60);
         ball = new Ball(120,HEIGHT/2 - 1);
+        level = new Level();
+
+
     }
 
     public static void main(String[] args) {
@@ -36,7 +40,11 @@ public class Game extends Canvas implements Runnable, KeyListener {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        frame.toFront();
+        game.setFocusable(true);
+        game.requestFocusInWindow();
         new Thread(game).start();
+
     }
 
     public void tick(){
@@ -58,11 +66,12 @@ public class Game extends Canvas implements Runnable, KeyListener {
         player.render(g);
         enemy.render(g);
         ball.render(g);
+        level.render(g);
 
         g.setFont(new Font("arial", Font.BOLD,8));
         g.setColor(Color.white);
         g.drawString("Player: " + pointPlayer + " | " + " Computador: " + pointComputador, 80, 10 );
-        g.drawString("Level " + level, 5, HEIGHT - 5);
+
 
         g = bs.getDrawGraphics();
         //Creando a layer para o jogo
