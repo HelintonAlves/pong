@@ -6,6 +6,7 @@ public class Enemy {
 
     public double x, y;
     public int width, height;
+    public static double speedEnemy = 0.07;
 
 
     public Enemy(int x, int y){
@@ -17,7 +18,7 @@ public class Enemy {
 
     public void tick(){
 
-        y += (Game.ball.y - y - 6) * 0.07;
+        y += (Game.ball.y - y - 6) * speedEnemy;
 
         //Lógica da colisão com a janela
         if (y < 0){
